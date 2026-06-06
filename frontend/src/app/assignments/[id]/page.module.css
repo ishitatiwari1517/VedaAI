@@ -1,0 +1,405 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-surface);
+}
+
+.main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.actionBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  padding: var(--space-2) 0;
+}
+
+.backBtn:hover {
+  color: var(--color-text-primary);
+}
+
+.actionRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.validationBadge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid;
+}
+
+.validBadge {
+  color: var(--color-easy-text);
+  background: var(--color-easy);
+  border-color: var(--color-easy-border);
+}
+
+.warnBadge {
+  color: var(--color-moderate-text);
+  background: var(--color-moderate);
+  border-color: var(--color-moderate-border);
+}
+
+.content {
+  flex: 1;
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ========================================
+   PAPER STYLES
+======================================== */
+
+.paper {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.paperHeader {
+  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+  color: white;
+  padding: var(--space-8) var(--space-10);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.schoolLogo {
+  width: 48px;
+  height: 48px;
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+}
+
+.schoolName {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+.paperTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+.paperMetaGrid {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-top: var(--space-2);
+  width: 100%;
+  max-width: 600px;
+}
+
+.metaItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--space-3) var(--space-4);
+}
+
+.metaLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metaValue {
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+.metaDivider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.15);
+  flex-shrink: 0;
+}
+
+.instructions {
+  padding: var(--space-5) var(--space-8);
+  border-bottom: 1px solid var(--color-border-light);
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.instruction {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.studentInfo {
+  display: flex;
+  gap: var(--space-8);
+  padding: var(--space-5) var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.infoLine {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  flex: 1;
+  min-width: 150px;
+}
+
+.underline {
+  flex: 1;
+  border-bottom: 1.5px solid var(--color-border);
+  height: 20px;
+  display: block;
+  min-width: 80px;
+}
+
+.sections {
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.endDivider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-8) var(--space-6);
+}
+
+.endLine {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.endText {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.waitingMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-10) 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.waitDots {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.waitDot {
+  width: 10px;
+  height: 10px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  animation: generatingPulse 1.2s ease-in-out infinite;
+  display: inline-block;
+}
+
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-16);
+  text-align: center;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.errorState h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.errorState p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  max-width: 400px;
+}
+
+.retryBtn {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.retryBtn:hover {
+  background: var(--color-primary-hover);
+}
+
+.loadingState {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-8);
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.loadingSpinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    margin-bottom: 70px;
+  }
+
+  .content {
+    padding: var(--space-4);
+  }
+
+  .actionBar {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .paperHeader {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .paperMetaGrid {
+    flex-wrap: wrap;
+  }
+
+  .sections,
+  .instructions,
+  .studentInfo {
+    padding: var(--space-4);
+  }
+
+  .studentInfo {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}
+
+/* Print overrides */
+@media print {
+  .layout,
+  .main {
+    display: block;
+    margin: 0;
+  }
+
+  .paper {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .paperHeader {
+    background: none;
+    color: black;
+    border-bottom: 2px solid black;
+    padding: 0 0 16pt;
+  }
+
+  .schoolName,
+  .paperTitle,
+  .metaLabel,
+  .metaValue {
+    color: black;
+  }
+
+  .paperMetaGrid {
+    background: none;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .metaDivider {
+    background: #ccc;
+  }
+}
