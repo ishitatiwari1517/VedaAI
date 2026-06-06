@@ -1,0 +1,32 @@
+services:
+  # Backend Web Service
+  - type: web
+    name: vedaai-backend
+    env: node
+    region: oregon
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5001
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: vedaai-redis
+          property: connectionString
+      # You need to provide these in the Render Dashboard
+      - key: MONGODB_URI
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+
+  # Redis instance for BullMQ (background jobs)
+  - type: redis
+    name: vedaai-redis
+    region: oregon
+    ipAllowList: [] # Only allow internal connections
+    plan: free
