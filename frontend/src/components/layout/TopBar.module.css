@@ -1,0 +1,133 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  height: 60px;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  flex-shrink: 0;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pageTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.2px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb:hover {
+  color: var(--color-text-primary);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Bell button */
+.bellBtn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.bellBtn:hover {
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.notifDot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 7px;
+  height: 7px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  border: 1.5px solid white;
+}
+
+/* User chip — Figma shows avatar + "John Doe" + chevron */
+.userChip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px 5px 5px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  background: var(--color-bg);
+}
+
+.userChip:hover {
+  background: var(--color-surface);
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  background: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.userName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.chevron {
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 16px;
+    height: 56px;
+  }
+
+  .userName {
+    display: none;
+  }
+}
