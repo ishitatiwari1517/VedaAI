@@ -1,0 +1,92 @@
+.questionCard {
+  padding: 0;
+  border: none;
+  background: none;
+  animation: none;
+  margin-bottom: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.questionCard:hover {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.questionRow {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.questionNumber {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+  flex-shrink: 0;
+  min-width: 20px;
+  text-align: right;
+}
+.questionNumber::after {
+  content: ".";
+}
+
+.questionContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 40px; /* Space for marks */
+}
+
+.questionText {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #000;
+  font-weight: normal;
+  text-align: justify;
+}
+
+.questionMeta {
+  display: none; /* Hide difficulty badges for pure print look */
+}
+
+.marksTag {
+  display: none;
+}
+
+.questionMarks {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+}
+.questionMarks::before {
+  content: "(";
+}
+.questionMarks::after {
+  content: ")";
+}
+
+.answerBlock {
+  background: #f9fafb;
+  border-left: 2px solid #ccc;
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-left: 28px;
+}
+
+.answerLabel {
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.answerText {
+  font-size: 14px;
+  color: #333;
+}
