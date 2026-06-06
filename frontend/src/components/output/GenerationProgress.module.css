@@ -1,0 +1,137 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 32px;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+}
+
+.iconContainer {
+  margin-bottom: 24px;
+}
+
+.pulseIcon {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .5; transform: scale(1.1); }
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin: 0 0 32px 0;
+}
+
+.progressSection {
+  margin-bottom: 32px;
+}
+
+.progressBarWrapper {
+  height: 8px;
+  background: var(--color-surface-2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+.indeterminate {
+  animation: slide 1.5s ease-in-out infinite alternate;
+  width: 30% !important;
+}
+
+@keyframes slide {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(300%); }
+}
+
+.progressText {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.progressCount {
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.logsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  background: var(--color-surface);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.logItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.logCheck {
+  color: #10B981;
+  font-weight: 700;
+}
+
+.logSpin {
+  color: var(--color-primary);
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.logTextDone {
+  color: var(--color-text-secondary);
+}
+
+.logTextActive {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
