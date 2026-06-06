@@ -1,0 +1,177 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-surface);
+}
+
+.main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 28px 32px;
+}
+
+/* ── Filter row ─────────────────────────── */
+.filterRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filterLeft {
+  display: flex;
+  gap: 8px;
+}
+
+.filterBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filterBtn:hover {
+  border-color: var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
+.searchWrap {
+  position: relative;
+  flex: 1;
+  max-width: 280px;
+  margin-left: auto;
+}
+
+.searchIco {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  height: 36px;
+  padding: 0 12px 0 34px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.searchInput:focus {
+  border-color: var(--color-primary);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* ── 2-column grid ─────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.noResults {
+  padding: 40px 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+/* ── Create Assignment button row ────────── */
+.createRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+/* Figma: black rounded pill */
+.createBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #111827;
+  color: white;
+  padding: 11px 24px;
+  border-radius: var(--radius-full);
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.createBtn:hover {
+  background: #1F2937;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+/* ── Skeleton loading ─────────────────── */
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.skeletonCard {
+  height: 110px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(90deg, var(--color-surface) 0%, var(--color-surface-2) 50%, var(--color-surface) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* ── Responsive ───────────────────────── */
+@media (max-width: 1024px) {
+  .grid,
+  .skeletonGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .searchWrap {
+    max-width: 100%;
+  }
+
+  .filterRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
