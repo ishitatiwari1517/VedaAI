@@ -31,8 +31,8 @@
 
 ## Live Demo
 
-> 🔗 **Frontend**: [(https://vedaai-sage.vercel.app/assignments)] https://vedaai-sage.vercel.app/assignments
-> 🔗 **Backend API**: [https://veda-ai-backend.railway.app](https://veda-ai-backend.railway.app)
+> 🔗 **Frontend**: (https://vedaai-sage.vercel.app/assignments)
+> 🔗 **Backend API**:(https://vedaai-lege.onrender.com)
 
 ---
 
